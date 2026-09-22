@@ -40,7 +40,7 @@ def has_korean(text: str) -> bool:
 
 
 def load_training_rows() -> list[tuple[str, str]]:
-    """(title, label) 목록. 검증셋(poc/data/eval_set.csv)과 겹치는 제목은 뺀다."""
+    """(title, label) 목록. 검증 세트(poc/data/eval_set.csv)과 겹치는 제목은 뺀다."""
     with open(DATA_DIR / "eval_set.csv", encoding="utf-8-sig") as f:
         eval_titles = {row["title"].strip() for row in csv.DictReader(f)}
 
@@ -51,7 +51,7 @@ def load_training_rows() -> list[tuple[str, str]]:
             if not title or not has_korean(title):
                 continue
             if title in eval_titles:
-                continue  # 검증셋 유출 방지
+                continue  # 검증 세트 유출 방지
             rows.append((title, row["label"]))
     return rows
 
@@ -121,7 +121,7 @@ def run(model_name: str, out_dir: Path, unfrozen_layers: int = UNFROZEN_LAYERS) 
     np.random.seed(SEED)
 
     rows = load_training_rows()
-    print(f"[{model_name}] 학습 자료 {len(rows)}건 (한국어, 검증셋 제외)")
+    print(f"[{model_name}] 학습 자료 {len(rows)}건 (한국어, 검증 세트 제외)")
     rng = np.random.RandomState(SEED)
     idx = rng.permutation(len(rows))
     split = int(len(rows) * 0.9)

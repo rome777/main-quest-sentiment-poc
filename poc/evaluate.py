@@ -1,4 +1,4 @@
-"""모든 후보를 같은 20건 검증셋으로 비교한다.
+"""모든 후보를 같은 20건 검증 세트로 비교한다.
 
 - Gemini: poc/baseline_gemini.py 를 먼저 돌려서 나온 poc/data/pred_gemini.csv
   를 읽는다 (API 호출은 한 번만 하면 되니 분리했다).
@@ -170,7 +170,7 @@ def main() -> None:
     lines = [
         "# PoC 비교 결과",
         "",
-        f"검증셋 20건 ({DATA_DIR / 'eval_set.csv'}), 모델을 돌리기 전에 확정했다.",
+        f"검증 세트 20건 ({DATA_DIR / 'eval_set.csv'}), 모델을 돌리기 전에 확정했다.",
         "",
         "> **주의 — 아래 '일치율'은 정확도가 아니다.** 참조 라벨(`reference_label` 칸)은 "
         "사람이 아니라 Claude 가 Gemini 라벨을 본 상태에서 매긴 것이고, 사람 검수를 "
