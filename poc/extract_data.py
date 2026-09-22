@@ -1,18 +1,20 @@
-"""han-river DB에서 감성분류용 실데이터를 뽑아 로컬 CSV로 저장한다.
+"""운영 DB에서 감성분류용 실데이터를 뽑아 로컬 CSV로 저장한다.
 읽기 전용. 운영 DB에 아무것도 쓰지 않는다.
+
+이 저장소는 공개라 운영 코드 경로를 직접 적지 않는다 — `.env` 에
+`PROD_REPO_ENV_FILE`(운영 코드의 .env, DATABASE_URL 포함)을 설정해야
+이 스크립트가 동작한다 (`.env.example` 참고).
 """
 import asyncio
 import csv
 import os
-import sys
 from pathlib import Path
-
-sys.path.insert(0, str(Path(r"C:\Project\han-river-view-or-dive\src")))
 
 import asyncpg
 from dotenv import load_dotenv
 
-load_dotenv(r"C:\Project\han-river-view-or-dive\.env")
+load_dotenv(Path(__file__).parent.parent / ".env")
+load_dotenv(os.environ["PROD_REPO_ENV_FILE"])
 
 OUT_DIR = Path(__file__).parent / "data"
 OUT_DIR.mkdir(exist_ok=True)

@@ -1,25 +1,30 @@
-"""후보 1 — 지금 쓰는 방식. han-river 프로덕션의 GeminiClassifier 를 그대로
-불러와 검증셋 20건에 실제로 호출한다 (같은 프롬프트, 같은 구조화 출력
-스키마 — 강의도 말했듯 "지금 쓰는 방식"을 후보에서 빼면 개선 폭을 모른다).
+"""후보 1 — 지금 쓰는 방식. 운영 코드(비공개 저장소)의 GeminiClassifier 를
+그대로 불러와 검증셋 20건에 실제로 호출한다 (같은 프롬프트, 같은 구조화
+출력 스키마 — 강의도 말했듯 "지금 쓰는 방식"을 후보에서 빼면 개선 폭을
+모른다).
 
-han-river 저장소의 코드를 import 만 한다 — 복사하지 않는다. 프롬프트가
-나중에 바뀌어도 이 스크립트는 항상 실제 프로덕션 프롬프트로 비교하게 된다.
+운영 코드는 import 만 한다 — 복사하지 않는다. 프롬프트가 나중에 바뀌어도
+이 스크립트는 항상 실제 프로덕션 프롬프트로 비교하게 된다. 이 저장소는
+공개라 운영 코드 경로를 직접 적지 않는다 — `.env` 에
+`PROD_REPO_SRC`(운영 코드 src 경로)와 `PROD_REPO_ENV_FILE`(운영 코드의
+.env, GEMINI_API_KEY 포함)를 설정해야 이 스크립트가 동작한다
+(`.env.example` 참고).
 """
 
 from __future__ import annotations
 
 import asyncio
+import os
 import sys
 import time
 from pathlib import Path
 
 from dotenv import load_dotenv
 
-HANRIVER_SRC = Path(r"C:\Project\han-river-view-or-dive\src")
-sys.path.insert(0, str(HANRIVER_SRC))
-load_dotenv(r"C:\Project\han-river-view-or-dive\.env")
-
-import os  # noqa: E402
+load_dotenv(Path(__file__).parent.parent / ".env")
+PROD_REPO_SRC = os.environ["PROD_REPO_SRC"]
+sys.path.insert(0, PROD_REPO_SRC)
+load_dotenv(os.environ["PROD_REPO_ENV_FILE"])
 
 from hanriver.llm.prompt import ParseError  # noqa: E402
 from hanriver.llm.client import GeminiClassifier  # noqa: E402
@@ -37,8 +42,8 @@ async def classify_all(titles: list[str]) -> list[tuple[str, float, int]]:
     """
     api_key = os.environ["GEMINI_API_KEY"]
     # thinking_level="low" 가 지금 API 버전에서 이 모델에 400 을 낸다
-    # (프로덕션 코드 작성 이후 API 쪽이 바뀐 것으로 보인다 - han-river 문제이지
-    # 이 PoC 스크립트가 고칠 범위가 아니라 여기서만 끈다).
+    # (프로덕션 코드 작성 이후 API 쪽이 바뀐 것으로 보인다 - 운영 코드
+    # 쪽 문제이지 이 PoC 스크립트가 고칠 범위가 아니라 여기서만 끈다).
     clf = GeminiClassifier(api_key=api_key, thinking_level="")
     results = []
     for title in titles:

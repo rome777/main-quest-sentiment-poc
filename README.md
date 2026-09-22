@@ -1,6 +1,6 @@
 # PoC — 커뮤니티 글 감성분류, Gemini API 탈출
 
-개인 자동매매 시스템(비공개 저장소)이 암호화폐 커뮤니티 글의 감성분류를
+비공개로 운영 중인 파이프라인이 암호화폐 커뮤니티 글의 감성분류를
 Google Gemini 2.5 Flash API에 맡기고 있다. 그 자리에 **로컬에서 도는
 한국어 특화 파인튜닝 모델**을 넣을 수 있는지 실측한 PoC다.
 
@@ -22,14 +22,16 @@ Google Gemini 2.5 Flash API에 맡기고 있다. 그 자리에 **로컬에서 �
 
 ## 재현 방법
 
+`poc/baseline_gemini.py`, `poc/extract_data.py` 는 비공개 운영 코드/DB에
+접근해야 해서 이 저장소만 클론해서는 못 돌린다 (`.env.example` 을 `.env`
+로 복사하고 본인 경로를 채워야 한다). 나머지(`finetune_*.py`,
+`baseline_rule.py`, `evaluate.py`)는 이미 남겨둔 `poc/data/*.csv` 스냅샷
+만으로 그대로 돌아간다.
+
 ```bash
 uv venv .venv --python 3.12 --system-site-packages
 uv pip install --python .venv/Scripts/python.exe -r requirements.txt
 
-.venv/Scripts/python.exe poc/baseline_gemini.py      # 후보 1: 본인 GEMINI_API_KEY 필요
 .venv/Scripts/python.exe poc/finetune_kcelectra.py   # 후보 3: 첫 실행 시 모델 다운로드
-.venv/Scripts/python.exe poc/evaluate.py             # 셋을 한 번에 비교 (후보 2 포함)
+.venv/Scripts/python.exe poc/evaluate.py             # 후보 1(저장된 예측)·2·3 비교
 ```
-
-원본 DB에서 데이터를 다시 뽑고 싶다면 `poc/extract_data.py` (로컬 PostgreSQL
-필요, 보통은 건너뛰어도 된다 — 스냅샷이 `poc/data/*.csv` 에 이미 있다).

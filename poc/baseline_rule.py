@@ -1,11 +1,8 @@
 """후보 2 — 규칙 기반 키워드 매칭.
 
-han-river 저장소의 `hanriver/llm/client.py` 의 `MockClassifier` 와 같은
-키워드 목록을 그대로 옮겼다 (실제로 API 키가 없을 때 프로덕션이 쓰는
-폴백 로직이다 — "이미 쓰는 것"에 해당). 비용 0, 로컬, 외부 전송 없음.
-성능 하한선 참고용으로 넣는다.
-
-출처: C:\\Project\\han-river-view-or-dive\\src\\hanriver\\llm\\client.py
+운영 코드(비공개 저장소)에 있는 API 키 없을 때의 폴백 분류기와 같은
+키워드 목록을 그대로 옮겼다 ("이미 쓰는 것"에 해당). 비용 0, 로컬,
+외부 전송 없음. 성능 하한선 참고용으로 넣는다.
 """
 
 from __future__ import annotations
