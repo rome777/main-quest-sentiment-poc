@@ -5,4 +5,5 @@ poc/data/_peek.txt
 poc/data/_eval_candidates_peek.txt
 poc/data/_gemini_peek.txt
 poc/model/
+poc/model_*/
 .env

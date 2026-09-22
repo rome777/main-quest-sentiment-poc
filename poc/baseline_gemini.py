@@ -80,9 +80,9 @@ def main() -> None:
 
     with open(data_dir / "pred_gemini.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
-        w.writerow(["idx", "title", "human_label", "pred_label", "latency_sec", "parse_retries"])
+        w.writerow(["idx", "title", "reference_label", "pred_label", "latency_sec", "parse_retries"])
         for row, (label, dt, retries) in zip(rows, results):
-            w.writerow([row["idx"], row["title"], row["human_label"], label, f"{dt:.3f}", retries])
+            w.writerow([row["idx"], row["title"], row["reference_label"], label, f"{dt:.3f}", retries])
     n_retried = sum(1 for _, _, r in results if r > 0)
     print(f"JSON 파싱 실패 후 재시도가 필요했던 건: {n_retried}/{len(results)}")
     print(f"저장: {data_dir / 'pred_gemini.csv'}")

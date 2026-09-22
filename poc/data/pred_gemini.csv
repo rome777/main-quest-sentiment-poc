@@ -1,4 +1,4 @@
-﻿idx,title,human_label,pred_label,latency_sec,parse_retries
+﻿idx,title,reference_label,pred_label,latency_sec,parse_retries
 1,이더파이 내 숏 청산가 딱 찍고 내려가네 ㅋㅋㅋㅋ,NEGATIVE,NEGATIVE,3.691,0
 2,숏충이 손절했네 바로 내릴께,NEUTRAL,POSITIVE,18.083,4
 3,너가 숏잡아서 한번더올릴께 ㅇㅇ,POSITIVE,POSITIVE,3.240,0

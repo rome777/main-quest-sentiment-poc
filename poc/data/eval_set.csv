@@ -1,4 +1,4 @@
-idx,source,title,gemini_label,gemini_confidence,human_label,is_hard,note
+idx,source,title,gemini_label,gemini_confidence,reference_label,is_hard,note
 1,COINPAN,이더파이 내 숏 청산가 딱 찍고 내려가네 ㅋㅋㅋㅋ,NEGATIVE,85,NEGATIVE,1,반어적 웃음이지만 청산 직전까지 몰린 공포 서술이라 부정으로 판단
 2,DCINSIDE,숏충이 손절했네 바로 내릴께,POSITIVE,85,NEUTRAL,1,반어법 방향이 불명확 - 숏이 손절한 뒤 오른다는건지 내린다는건지 문장만으로 확정 못함
 3,DCINSIDE,너가 숏잡아서 한번더올릴께 ㅇㅇ,POSITIVE,85,POSITIVE,0,숏 세력을 조롱하며 상승을 확신하는 톤
