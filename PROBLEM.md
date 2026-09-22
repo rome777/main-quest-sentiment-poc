@@ -4,8 +4,8 @@
 
 ## 도메인 설명
 
-[han-river-view-or-dive](https://github.com/rome777/han-river-view-or-dive) 는
-디시인사이드·코인판·레딧·4chan 에서 암호화폐 관련 글을 실시간으로 수집해
+`han-river-view-or-dive`(개인 자동매매 시스템, 비공개 저장소이므로 링크는
+생략한다)는 디시인사이드·코인판·레딧·4chan 에서 암호화폐 관련 글을 실시간으로 수집해
 감성(POSITIVE/NEGATIVE/NEUTRAL)을 분류하고, 그 분류 결과를 시그널 엔진의
 입력(`sentiment_bucket`)으로 써서 매매 여부를 판단하는 개인 자동매매 시스템이다.
 
