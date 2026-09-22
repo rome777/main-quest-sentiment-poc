@@ -1,0 +1,21 @@
+﻿idx,title,human_label,pred_label,latency_sec,parse_retries
+1,이더파이 내 숏 청산가 딱 찍고 내려가네 ㅋㅋㅋㅋ,NEGATIVE,NEGATIVE,3.691,0
+2,숏충이 손절했네 바로 내릴께,NEUTRAL,POSITIVE,18.083,4
+3,너가 숏잡아서 한번더올릴께 ㅇㅇ,POSITIVE,POSITIVE,3.240,0
+4,푸틴형 미사일싸줘요 빵야빵야,NEGATIVE,PARSE_FAILED,17.442,5
+5,스토리지 잘가세요~~,NEGATIVE,NEGATIVE,10.643,2
+6,비트코인,NEUTRAL,NEUTRAL,1.524,0
+7,아래에서 탄 새끼들 지금 좆도 안쫄리면서 ㅅㅂ,POSITIVE,POSITIVE,15.670,3
+8,이제 크립토로 싸이클 전환임,POSITIVE,POSITIVE,2.468,0
+9,진입못하고 포모오던 관망단들 개추 ㅋㅋㅋㅋ,POSITIVE,POSITIVE,2.673,0
+10,비트 방금 말아올린거보고 롱으로 정했다,POSITIVE,POSITIVE,1.759,0
+11,억단위 익절 얼마만이노 ㅋㅋㅋㅋㅋ,POSITIVE,POSITIVE,2.394,0
+12,이더 7월 저점에 샀으면 +50%네,NEUTRAL,POSITIVE,3.222,0
+13,매매할게 없다…,NEGATIVE,NEUTRAL,2.305,0
+14,대운지 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ,NEUTRAL,NEGATIVE,2.781,0
+15,설거지장 냄새 존나나네...튀어야겠노 ㄷㄷ,NEGATIVE,NEGATIVE,3.059,0
+16,랍스터 숏 치다가 목 돌아 가겠다..,NEGATIVE,NEGATIVE,6.991,1
+17,기분좋게 점심먹으려하는데,NEUTRAL,POSITIVE,2.166,0
+18,힘아리가 앖네 그냥 밑으로 폭락하자..,NEGATIVE,NEGATIVE,2.917,0
+19,코인턴 왔냐 ㅋㅋㅋㅋ,NEUTRAL,PARSE_FAILED,18.628,5
+20,60대 카드론 3.5조 늘었다…5060 '빚투' 증가,NEUTRAL,NEUTRAL,3.263,0

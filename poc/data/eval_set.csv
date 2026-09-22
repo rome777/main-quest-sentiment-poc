@@ -1,0 +1,21 @@
+idx,source,title,gemini_label,gemini_confidence,human_label,is_hard,note
+1,COINPAN,이더파이 내 숏 청산가 딱 찍고 내려가네 ㅋㅋㅋㅋ,NEGATIVE,85,NEGATIVE,1,반어적 웃음이지만 청산 직전까지 몰린 공포 서술이라 부정으로 판단
+2,DCINSIDE,숏충이 손절했네 바로 내릴께,POSITIVE,85,NEUTRAL,1,반어법 방향이 불명확 - 숏이 손절한 뒤 오른다는건지 내린다는건지 문장만으로 확정 못함
+3,DCINSIDE,너가 숏잡아서 한번더올릴께 ㅇㅇ,POSITIVE,85,POSITIVE,0,숏 세력을 조롱하며 상승을 확신하는 톤
+4,COINPAN,푸틴형 미사일싸줘요 빵야빵야,NEGATIVE,85,NEGATIVE,1,은유적 표현이지만 시장에 대한 절망/자포자기로 판단
+5,DCINSIDE,스토리지 잘가세요~~,NEGATIVE,85,NEGATIVE,0,코인이 폭락해 작별인사를 하는 조롱조
+6,COINPAN,비트코인,NEUTRAL,30,NEUTRAL,1,제목만으로 정보 없음 - 확신 낮은 중립이 맞음
+7,DCINSIDE,아래에서 탄 새끼들 지금 좆도 안쫄리면서 ㅅㅂ,POSITIVE,85,POSITIVE,0,저점매수자들의 여유/자신감 표현
+8,DCINSIDE,이제 크립토로 싸이클 전환임,POSITIVE,90,POSITIVE,0,자금 유입 기대를 직접 서술
+9,DCINSIDE,진입못하고 포모오던 관망단들 개추 ㅋㅋㅋㅋ,POSITIVE,85,POSITIVE,0,상승장에서 관망자를 조롱하는 낙관적 톤
+10,DCINSIDE,비트 방금 말아올린거보고 롱으로 정했다,POSITIVE,85,POSITIVE,0,상승 확인 후 매수 결정 서술
+11,DCINSIDE,억단위 익절 얼마만이노 ㅋㅋㅋㅋㅋ,POSITIVE,95,POSITIVE,0,수익 자랑 - 명확한 긍정
+12,DCINSIDE,이더 7월 저점에 샀으면 +50%네,POSITIVE,85,NEUTRAL,1,감정 표현이 아니라 사후 계산 정보 전달에 가까움 - Gemini와 판단이 갈리는 지점
+13,DCINSIDE,매매할게 없다…,NEGATIVE,80,NEGATIVE,0,기회 없음에 대한 답답함/무기력
+14,DCINSIDE,대운지 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ,NEGATIVE,90,NEUTRAL,1,웃음만으로는 방향 판단 불가 - 정보 부족
+15,DCINSIDE,설거지장 냄새 존나나네...튀어야겠노 ㄷㄷ,NEGATIVE,95,NEGATIVE,0,분산 매도(설거지) 경고 - 명확한 부정
+16,COINPAN,랍스터 숏 치다가 목 돌아 가겠다..,NEGATIVE,85,NEGATIVE,0,숏 포지션 손실로 인한 고통 호소
+17,DCINSIDE,기분좋게 점심먹으려하는데,NEGATIVE,70,NEUTRAL,1,문장이 끊겨 있어 이어질 내용을 추정할 근거 없음
+18,DCINSIDE,힘아리가 앖네 그냥 밑으로 폭락하자..,NEGATIVE,95,NEGATIVE,0,체념 섞인 하락 기대 - 명확한 부정
+19,DCINSIDE,코인턴 왔냐 ㅋㅋㅋㅋ,NEGATIVE,75,NEUTRAL,1,신규 참가자를 놀리는 인신공격성 발언 - 시장 방향에 대한 의견 아님
+20,DCINSIDE,60대 카드론 3.5조 늘었다…5060 '빚투' 증가,NEUTRAL,95,NEUTRAL,0,감정 없는 뉴스 전달
